@@ -1,6 +1,6 @@
 # OS X
 .DS_Store
-
+.git
 # Jekyll build
 /_site/
 .jekyll-metadata
