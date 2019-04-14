@@ -1404,7 +1404,6 @@ Usage (In Ghost editor):
 }
 
 .floating-header-logo {
-    overflow: hidden;
     margin: 0 0 0 20px;
     font-size: 1.6rem;
     line-height: 1em;
