@@ -33,6 +33,8 @@
     <meta property="og:image:width" content="2000" />
     <meta property="og:image:height" content="666" />{% endif %}
 
+    <link rel="canonical" href="{{ site.url }}{% if site.baseurl %}{{ site.baseurl }}{% endif %}{{ page.url | remove_first: '/' }}"/>
+
     <script type="application/ld+json">
 {
     "@context": "https://schema.org",
