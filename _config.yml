@@ -32,7 +32,7 @@ disqus: True
 disqus_shortname: mylittletechlife # replace with your disqus username
 
 # Google Analytics
-google_analytics: UA-69281367-1 # replace with your GA tracking identifier
+google_analytics: UA-138326907-1
 
 # Permalinks
 permalink: /:title
