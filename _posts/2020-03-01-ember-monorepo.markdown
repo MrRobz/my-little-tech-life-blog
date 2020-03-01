@@ -27,7 +27,7 @@ orchestrate a change across multiple modules and you can also test these things 
 * Addon modules have their own test cases.
 * Addon modules become publishable if you wanna share it among teams.
 
-### Before we start: Splitting your project files into engines and addon
+### Before we start: Splitting your project files into engines and addons
 Let's say you have a Ember project say ABC.
 You would have to split your project ABC into multiple [engine projects](http://ember-engines.com/).
 <br>
@@ -36,12 +36,14 @@ You would have to split your project ABC into multiple [engine projects](http://
 
 Now you have something like this:
 
-ABC-project<br>
-  &nbsp;&nbsp;|_ Host-app<br>
-  &nbsp;&nbsp;|_ Engine-1<br>
-  &nbsp;&nbsp;|_ Engine-2<br>
-  &nbsp;&nbsp;|_ Addon-1<br>
-  &nbsp;&nbsp;|_ Addon-2<br>
+```
+ABC
+├── Host-app
+├── Addon-1
+├── Addon-2
+├── Engine-1
+└── Engine-2
+```
 Where Host-app host is your original project and Engine-* are the ones you splitted.
 
 > Now lets get down to business.
@@ -53,13 +55,13 @@ We will be using [yarn workspace](https://classic.yarnpkg.com/en/docs/workspaces
 1) Move your file structure to this kinda layout (not necessary though)
 ```
 ABC
-  |_ HOST-app
-  |_ engines
-    |_Engine-1
-    |_Engine-2
-  |_ addons
-    |_ Addon-1
-    |_ Addon-2
+├── Host-app
+├── addons
+│   ├── \ Addon-1
+│   └── Addon-2
+└── engines
+    ├── Engine-1
+    └── Engine-2
 ```
 
 2) In your project's root create a `package.json` file and add these lines
