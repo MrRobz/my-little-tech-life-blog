@@ -66,7 +66,7 @@ Pacebook
 ├── host-app
 ├── addons
 │   ├── design-system
-│   └──notifications-widget
+│   └── notifications-widget
 └── engines
     ├── feed-page
     └── chat-page
