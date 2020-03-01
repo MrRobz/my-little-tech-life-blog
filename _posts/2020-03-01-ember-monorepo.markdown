@@ -127,7 +127,7 @@ While converting your project to a monorepo gives great advantages, it has some 
 
 Sometime you might not even need monorepo especially when something like [embroider](https://github.com/embroider-build/embroider) is on the rise.
 
-You mostly don't need a monorepos when:
+You mostly don't need a monorepo when:
 * your team size is small
 * project source code is not that big
 * Can't split code into modules or there is no need
