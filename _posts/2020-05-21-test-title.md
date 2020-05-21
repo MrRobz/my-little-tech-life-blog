@@ -5,7 +5,7 @@ class: post-template
 subclass: post tag-ember-addon
 navigation: true
 title: test title
-cover: /assets/uploads/screenshot-2020-05-06-at-4.35.43-pm.png
+cover: /assets/uploads/undraw_design_feedback_dexe.png
 tags: test
 author: robin
 ---
