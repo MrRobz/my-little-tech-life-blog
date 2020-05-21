@@ -72,8 +72,8 @@ lsi: False
 username: jekyller
 repo: jasper2
 branch: master
-relative_source: ../jasper2/
-destination: ../jasper2-pages/
+relative_source: ./_site/
+destination: ./_site/
 
 exclude:
   - assets/css
