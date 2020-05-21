@@ -1,7 +1,7 @@
 ---
 layout: post
 current: post
-cover:  assets/images/ember-addon/tomster-hat-1.png
+cover:  /assets/images/ember-addon/tomster-hat-1.png
 navigation: True
 title: 5 Things to do after building an Ember Addon
 date: 2019-04-14 00:06:43

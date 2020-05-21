@@ -1,7 +1,7 @@
 ---
 layout: post
 current: post
-cover:  assets/images/ember-monorepo-post/dog-box.png
+cover:  /assets/images/ember-monorepo-post/dog-box.png
 navigation: True
 title: Splitting & Migrating your Ember project to a Monorepo
 date: 2020-03-01 00:06:00
