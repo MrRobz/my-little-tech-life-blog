@@ -13,7 +13,7 @@ Well, integrating tailwind with ember has become easier than ever. TLDR; as of T
 
 ### Adding tailwindcss to an ember app
 
-##### Lets start by creating a new ember app:
+##### Let's start by creating a new ember app:
 
 ```
 ember new your-project --yarn
@@ -53,7 +53,7 @@ module.exports = {
 ....
 ```
 
-These settings will make sure that you don't ship any unwanted tailwind css to production build. More info [](https://tailwindcss.com/docs/controlling-file-size/)[here](https://tailwindcss.com/docs/controlling-file-size/)
+These settings will make sure that you don't ship any unwanted tailwind CSS to production build. More info [](https://tailwindcss.com/docs/controlling-file-size/)[here](https://tailwindcss.com/docs/controlling-file-size/)
 
 ##### Update build pipeline to include plugins
 
@@ -84,6 +84,7 @@ module.exports = function(defaults) {
 ```
 
 ##### Create new CSS files and import Tailwind
+
 Create `app/styles/components.css` and `app/styles/utilities.css` then update `app.css`
 
 ```css
@@ -98,7 +99,4 @@ Create `app/styles/components.css` and `app/styles/utilities.css` then update `a
 
 Now you can start to add Tailwind classes to your project, add additional configuration including custom components and utilities.
 
-Reference for this was taken from: https://github.com/chrism/emberjs-tailwind-purgecss
-
-
-
+Reference for this was taken from https://github.com/chrism/emberjs-tailwind-purgecss
