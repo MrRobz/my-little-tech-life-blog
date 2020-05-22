@@ -15,20 +15,20 @@ Well, integrating tailwind with ember has become easier than ever. TLDR; as of T
 
 ##### Let's start by creating a new ember app:
 
-```shell-session
+```shellsession
 ember new your-project --yarn
 cd your-project
 ```
 
 ##### Install PostCSS
 
-```shell-session
+```shellsession
 yarn add ember-cli-postcss tailwindcss postcss-import -D
 ```
 
 ##### Generate Tailwind configuration file
 
-```shell-session
+```shellsession
 mkdir app/tailwind
 npx tailwind init app/tailwind/config.js --full
 ```
