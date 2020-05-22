@@ -4,7 +4,7 @@ current: current
 class: post-template
 subclass: post tag-ember-addon
 navigation: true
-title: Setting up TailwindCSS with ember in 2020
+title: Setting up TailwindCSS with ember with in-build purgeCSS
 cover: /assets/uploads/tailwind-ember.png
 tags: ember, tailwind
 author: robin
