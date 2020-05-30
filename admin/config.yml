@@ -16,7 +16,7 @@ collections:
       - { name: "navigation", label: "Navigation", widget: "hidden", default: True }
       - { name: "title", label: "Title", widget: "string" }
       - { name: "cover", label: "Cover", widget: "image" }
-      - { name: "tags", label: "Tags", widget: "string" }
+      - { name: "tags", label: "Tags", widget: "list" }
       - { name: "body", label: "Body", widget: "markdown" }
       - { name: "author", label: "Author", widget: "string", default: robin }
     meta: # Meta data fields. Just like fields, but without any preview element
