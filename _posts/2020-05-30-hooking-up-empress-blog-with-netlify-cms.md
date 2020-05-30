@@ -270,4 +270,6 @@ It is now safe to remove the default Empress blog posts. You can use the `delete
 
 
 
+Github repo: <https://github.com/MalayaliRobz/empress-netlify-cms-starter>
+
 Fore more details on Empress, Netlify CMS check out <https://github.com/empress/empress-blog> and <https://www.netlifycms.org/docs/intro/>
