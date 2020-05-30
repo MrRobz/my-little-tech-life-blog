@@ -252,8 +252,22 @@ If you set your registration preference to "Invite only," invite yourself (and a
 
 If you left your site registration open, or for return visits after confirming an email invitation, access your site's CMS at `yoursite.com/admin/`.
 
-After logging-in you should see a screen something like this.
+After logging-in to admin page, you should see a screen similar to 👇.
 
 ![netlify cms dashboard screenshot](/assets/uploads/screenshot-2020-05-30-at-8.35.18-pm.png)
 
 ## Start publishing
+
+It's time to create your first blog post. Click on `New Blog` button and start adding title, image and other properties right from the handy interface. When you click Publish, a new commit will be created in your GitHub repo with this format `Create Blog “year-month-date-title”`.
+
+Then Netlify will detect that there was a commit in your repo, and will start rebuilding your project. When your project is deployed you'll be able to see the post you created.
+
+**Note:** to add tags or authors, click on the respective collection name from side menu and click on the `New` button. 
+
+### [](https://www.netlifycms.org/docs/gatsby/#cleanup)Cleanup
+
+It is now safe to remove the default Empress blog posts. You can use the `delete entry` option available in the CMS.
+
+
+
+Fore more details on Empress, Netlify CMS check out <https://github.com/empress/empress-blog> and <https://www.netlifycms.org/docs/intro/>
