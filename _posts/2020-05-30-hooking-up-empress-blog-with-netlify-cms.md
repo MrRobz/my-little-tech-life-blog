@@ -9,19 +9,19 @@ cover: /assets/uploads/ember-netlify1.png
 tags: ember netlify-cms empress
 author: robin
 ---
-So you use [Empress-blog](https://github.com/empress/empress-blog) for your blog website. Do you edit and add blogs in local? What if you don't have your laptop? Do you then re-create the whole project just to add a new blog? What if I told you there was a better way!
+So you use [Empress-blog](https://github.com/empress/empress-blog) for your blog website. Do you edit and add blogs in local? What if you don't have your  personal laptop? Do you then re-create the whole project just to add a new blog post? What if I told you there was a better way!
 
-> Wouldn't be great if you could have a CMS for your blog and that too free of cost. And add a new blog post from the browser itself.
+> Wouldn't be great if you could have a CMS for your blog and that too free of cost. Add and Edit blog posts from the browser itself. 🤩
 
 Let me introduce you to **[Netlify CMS](https://www.netlifycms.org/)** your open source content management for your Git workflow.
 
-#### OK just show me how!
+##### OK just show me how!
 
 ## Create a new Empress-blog project
 
 Let's first create a new ember project and convert it into a empress-blog project.
 
-Run the following commands in the terminal, in the folder where you'd like to create the blog:
+Run the following commands in the terminal, in the folder where you'd like to create the blog.
 
 ```shell
 ember new super-blog
@@ -59,9 +59,9 @@ Hey! Welcome to empress-blog, it's great to have you :)
 
 We can see above that each blog post has a title, image, author, body and other properties. We will be recreating this using Netlify CMS.
 
-Similarly, have a look at author and tags folder `.md` files. We will need them for adding author(s) and tag(s) for your blog posts.
+Similarly, have a look at *author* and *tags* folder `.md` files. We will need them for adding author(s) and tag(s) for your blog posts.
 
-**Note:** for more configuration check out <https://github.com/empress/empress-blog>
+**Note:** for other global configuration options, check out [](https://github.com/empress/empress-blog)<https://github.com/empress/empress-blog#configuring>
 
 Try running in local with `npm start`  and your blog should be live in [http://localhost:4200](http://localhost:4200/)
 
@@ -69,8 +69,7 @@ Try running in local with `npm start`  and your blog should be live in [http://l
 
 ## Add Netlify CMS to your site
 
-Let's start giving your blog some super powers.\
-In the `public` folder create `admin` folder with `config.yml` and `index.html`
+Let's start giving your blog some super powers. In the `public` folder create `admin` folder with `config.yml` and `index.html` files in it.
 
 ```
 ├── public
@@ -79,7 +78,7 @@ In the `public` folder create `admin` folder with `config.yml` and `index.html`
          └ config.yml
 ```
 
-In your `config.yml`file paste the following configuration:
+In your `config.yml` file paste the following configuration:
 
 ```yaml
 backend:
@@ -138,7 +137,7 @@ collections:
 
 For this tutorial we will be using git-gateway as our backend for Netlify CMS. More details can be found [here.](https://www.netlifycms.org/docs/backends-overview/)
 
-In your `index.html` file paste in the following contents.
+In your `index.html` file, paste in the following contents.
 
 ```html
 <!doctype html>
@@ -160,7 +159,7 @@ In your `index.html` file paste in the following contents.
 
 While adding users to your CMS, netlify will send them an email with a link to your blog url containing an access token. We need to setup a watch for this and redirect them to the admin page so that netlify can verify them and add them as users. 
 
-In `index.html` file in the `app` folder. Add `<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>` in head tags. Also after the body add this small script.
+In `index.html` file in the `app` folder. Add `<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>` to the *<head>* tag. Also after the *<body>* tag add this small script.
 
 ```html
   <script>
@@ -188,12 +187,12 @@ The whole index.html file should look something like this now.
     
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 
-    {{content-for "head"}}
+    "{{"content-for "head""}}"
 
     <link integrity="" rel="stylesheet" href="{{rootURL}}assets/vendor.css">
     <link integrity="" rel="stylesheet" href="{{rootURL}}assets/super-blog.css">
 
-    {{content-for "head-footer"}}
+    "{{"content-for "head-footer""}}"
   </head>
   <body>
     {{content-for "body"}}
@@ -201,7 +200,7 @@ The whole index.html file should look something like this now.
     <script src="{{rootURL}}assets/vendor.js"></script>
     <script src="{{rootURL}}assets/super-blog.js"></script>
 
-    {{content-for "body-footer"}}
+    "{{"content-for "body-footer""}}"
   </body>
 
   <script>
@@ -218,7 +217,7 @@ The whole index.html file should look something like this now.
 </html>
 ```
 
-> Hurray we are almost done. Just a few more steps.
+> 🥳 we are almost done. Just a few more steps.
 
 ### Push to GitHub
 
@@ -262,13 +261,13 @@ It's time to create your first blog post. Click on `New Blog` button and start a
 
 Then Netlify will detect that there was a commit in your repo and will start rebuilding your project. When your project is deployed you'll be able to see the post you created.
 
-**Note:** to add tags or authors, click on the respective collection name from the side menu and click on the `New` button. 
+**Note:** to add tags or authors, click on the respective collection name from the side menu and click on the `New` button.
 
 ### [](https://www.netlifycms.org/docs/gatsby/#cleanup)Cleanup
 
 It is now safe to remove the default Empress blog posts. You can use the `delete entry` option available in the CMS.
 
-
+That's it you have successfully connected your Empress-blog with Netlify CMS. 🎉
 
 Github repo: <https://github.com/MalayaliRobz/empress-netlify-cms-starter>
 
