@@ -9,9 +9,9 @@ cover: /assets/uploads/ember-netlify1.png
 tags: ember netlify-cms empress
 author: robin
 ---
-So you use [Empress-blog](https://github.com/empress/empress-blog) for your blog website. Do you edit and add blogs in local? What if you don't have your laptop? Do you then re-create the whole project just to add a new blog. What if I told you there was a better way!
+So you use [Empress-blog](https://github.com/empress/empress-blog) for your blog website. Do you edit and add blogs in local? What if you don't have your laptop? Do you then re-create the whole project just to add a new blog? What if I told you there was a better way!
 
-> Wouldn't be great if you could have a CMS for you blog and that too free of cost. And add new blog post from the browser itself.
+> Wouldn't be great if you could have a CMS for your blog and that too free of cost. And add a new blog post from the browser itself.
 
 Let me introduce you to **[Netlify CMS](https://www.netlifycms.org/)** your open source content management for your Git workflow.
 
@@ -19,7 +19,7 @@ Let me introduce you to **[Netlify CMS](https://www.netlifycms.org/)** your open
 
 ## Create a new Empress-blog project
 
-Let's first create a new ember project and convert it to a empress-blog project.
+Let's first create a new ember project and convert it into a empress-blog project.
 
 Run the following commands in the terminal, in the folder where you'd like to create the blog:
 
@@ -31,11 +31,11 @@ ember install empress-blog empress-blog-attila-template
 
 It will ask you if you want to update the `index.html` file and you should say yes 👍
 
-For this tutorial we will be using the [empress-attila-template](https://github.com/empress/empress-blog-attila-template).
+For this tutorial, we will be using the [empress-attila-template](https://github.com/empress/empress-blog-attila-template).
 
 ## Get to know Empress
 
-In your favorite code editor, open up the code generated, and take a look at the `content` directory.
+In your favourite code editor, open up the code generated, and take a look at the `content` directory.
 
 You will see that there are multiple Markdown files that represent blog posts. Open one `.md` file and you will see something like this:
 
@@ -59,7 +59,7 @@ Hey! Welcome to empress-blog, it's great to have you :)
 
 We can see above that each blog post has a title, image, author, body and other properties. We will be recreating this using Netlify CMS.
 
-Similarly have a look at author and tags folder `.md` files. We will need them for adding author(s) and tag(s) for your blog posts.
+Similarly, have a look at author and tags folder `.md` files. We will need them for adding author(s) and tag(s) for your blog posts.
 
 **Note:** for more configuration check out <https://github.com/empress/empress-blog>
 
@@ -242,7 +242,7 @@ Netlify's Identity and Git Gateway services allow you to manage CMS admin users 
 1. Go to **Settings > Identity**, and select **Enable Identity service**.
 2. Under **Registration preferences**, select **Open** or **Invite only**. In most cases, you want only invited users to access your CMS, but if you're just experimenting, you can leave it open for convenience.
 3. If you'd like to allow one-click login with services like Google and GitHub, check the boxes next to the services you'd like to use, under **External providers**.
-4. Scroll down to **Services > Git Gateway**, and click **Enable Git Gateway**. This authenticates with your Git host and generates an API access token. In this case, we're leaving the Roles field blank, which means any logged in user may access the CMS. For information on changing this, check the [Netlify Identity documentation](https://docs.netlify.com/visitor-access/identity/).
+4. Scroll down to **Services > Git Gateway**, and click **Enable Git Gateway**. This authenticates with your Git host and generates an API access token. In this case, we're leaving the Roles field blank, which means any logged-in user may access the CMS. For information on changing this, check the [Netlify Identity documentation](https://docs.netlify.com/visitor-access/identity/).
 
 ## Accessing the CMS
 
@@ -252,17 +252,17 @@ If you set your registration preference to "Invite only," invite yourself (and a
 
 If you left your site registration open, or for return visits after confirming an email invitation, access your site's CMS at `yoursite.com/admin/`.
 
-After logging-in to admin page, you should see a screen similar to 👇.
+After logging-in to the admin page, you should see a screen similar to 👇.
 
 ![netlify cms dashboard screenshot](/assets/uploads/screenshot-2020-05-30-at-8.35.18-pm.png)
 
 ## Start publishing
 
-It's time to create your first blog post. Click on `New Blog` button and start adding title, image and other properties right from the handy interface. When you click Publish, a new commit will be created in your GitHub repo with this format `Create Blog “year-month-date-title”`.
+It's time to create your first blog post. Click on `New Blog` button and start adding the title, image and other properties right from the handy interface. When you click Publish, a new commit will be created in your GitHub repo with this format `Create Blog “year-month-date-title”`.
 
-Then Netlify will detect that there was a commit in your repo, and will start rebuilding your project. When your project is deployed you'll be able to see the post you created.
+Then Netlify will detect that there was a commit in your repo and will start rebuilding your project. When your project is deployed you'll be able to see the post you created.
 
-**Note:** to add tags or authors, click on the respective collection name from side menu and click on the `New` button. 
+**Note:** to add tags or authors, click on the respective collection name from the side menu and click on the `New` button. 
 
 ### [](https://www.netlifycms.org/docs/gatsby/#cleanup)Cleanup
 
