@@ -254,4 +254,6 @@ If you left your site registration open, or for return visits after confirming a
 
 After logging-in you should see a screen something like this.
 
+![netlify cms dashboard screenshot](/assets/uploads/screenshot-2020-05-30-at-8.35.18-pm.png)
+
 ## Start publishing
