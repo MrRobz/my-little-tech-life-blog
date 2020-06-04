@@ -4,7 +4,7 @@ current: current
 class: post-template
 subclass: post tag-ember-addon
 navigation: true
-title: Integrating Empress-blog with Netlify CMS
+title: How to integrate Netlify-CMS with Empress-blog
 cover: /assets/uploads/ember-netlify1.png
 tags: ember netlify-cms empress
 author: robin
