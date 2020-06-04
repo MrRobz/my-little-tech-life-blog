@@ -91,7 +91,7 @@ collections:
     label: 'Blog'
     folder: 'content/'
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    slug: "{% raw %}{{year}}-{{month}}-{{day}}-{{slug}{% endraw %}"
     fields:
       - { name: "title", label: "Title", widget: "string" }
       - { name: "image", label: "Image", widget: "image", required: false }
@@ -112,7 +112,7 @@ collections:
     label: 'Author'
     folder: 'author/'
     create: true
-    slug: "{{name}}"
+    slug: "{% raw %}{{name}}{% endraw %}"
     fields:
       - { name: "name", label: "Name", widget: "string" }
       - { name: "id", label: "Id", widget: "string" }
@@ -128,7 +128,7 @@ collections:
     label: 'Tag'
     folder: 'tag/'
     create: true
-    slug: "{{name}}"
+    slug: "{% raw %}{{name}}{% endraw %}"
     fields:
       - { name: "name", label: "Name", widget: "string" }
       - { name: "image", label: "Image", widget: "image", required: false }
@@ -187,20 +187,20 @@ The whole index.html file should look something like this now.
     
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 
-    "{{"content-for "head""}}"
+    {% raw %}{{content-for "head"}}{% endraw %}
 
-    <link integrity="" rel="stylesheet" href="{{rootURL}}assets/vendor.css">
-    <link integrity="" rel="stylesheet" href="{{rootURL}}assets/super-blog.css">
+    <link integrity="" rel="stylesheet" href="{% raw %}{{rootURL}}assets/vendor.css{% endraw %}">
+    <link integrity="" rel="stylesheet" href="{% raw %}{{rootURL}}assets/super-blog.css{% endraw %}">
 
-    "{{"content-for "head-footer""}}"
+    {% raw %}{{content-for "head-footer"}}{% endraw %}
   </head>
   <body>
-    {{content-for "body"}}
+    {% raw %}{{content-for "body"}}{% endraw %}
 
-    <script src="{{rootURL}}assets/vendor.js"></script>
-    <script src="{{rootURL}}assets/super-blog.js"></script>
+    <script src="{% raw %}{{rootURL}}assets/vendor.js{% endraw %}"></script>
+    <script src="{% raw %}{{rootURL}}assets/super-blog.js{% endraw %}"></script>
 
-    "{{"content-for "body-footer""}}"
+    {% raw %}"{{content-for "body-footer"}}{% endraw %}
   </body>
 
   <script>
