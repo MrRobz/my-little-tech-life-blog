@@ -8,6 +8,7 @@ title: How to integrate Netlify-CMS with Empress-blog
 cover: /assets/uploads/ember-netlify1.png
 tags: ember netlify-cms empress
 author: robin
+date: 2020-06-24 01:30:24
 ---
 So you use [Empress-blog](https://github.com/empress/empress-blog) for your blog website. Do you edit and add blogs in local? What if you don't have your  personal laptop? Do you then re-create the whole project just to add a new blog post? What if I told you there was a better way!
 
@@ -17,7 +18,7 @@ Let me introduce you to **[Netlify CMS](https://www.netlifycms.org/)** your open
 
 ##### OK just show me how!
 
-## Create a new Empress-blog project
+## 1) Create a new Empress-blog project
 
 Let's first create a new ember project and convert it into a empress-blog project.
 
@@ -67,9 +68,11 @@ Try running in local with `npm start`  and your blog should be live in [http://l
 
 > Great things are working in local. Let's move on to the CMS part.
 
-## Add Netlify CMS to your site
+## 2) Add Netlify CMS to your site
 
-Let's start giving your blog some super powers. In the `public` folder create `admin` folder with `config.yml` and `index.html` files in it.
+> Update: you don't need to do step 2 anymore. Just `ember install empress-blog-netlify-cms` and you are good to go. For more details check out [https://github.com/MalayaliRobz/empress-blog-netlify-cms](https://github.com/MalayaliRobz/empress-blog-netlify-cms).
+
+ Let's start giving your blog some super powers. In the `public` folder create `admin` folder with `config.yml` and `index.html` files in it.
 
 ```
 ├── public
@@ -219,7 +222,7 @@ The whole index.html file should look something like this now.
 
 > 🥳 we are almost done. Just a few more steps.
 
-### Push to GitHub
+### 3) Push to GitHub
 
 It's now time to commit your changes and push to GitHub. The ember new command does in-fact initialise a Git project automatically for you, so you only need to do:
 
@@ -230,11 +233,11 @@ git remote add origin https://github.com/YOUR_USERNAME/NEW_REPO_NAME.git
 git push -u origin master
 ```
 
-### Add your repo to Netlify
+### 4) Add your repo to Netlify
 
 Go to Netlify and select 'New Site from Git'. Select GitHub and the repository you just pushed to. Click Configure Netlify on GitHub and give access to your repository. Finish the setup by clicking Deploy Site. Netlify will begin reading your repository and starting building your project.
 
-### Enable Identity and Git Gateway
+### 5) Enable Identity and Git Gateway
 
 Netlify's Identity and Git Gateway services allow you to manage CMS admin users for your site without requiring them to have an account with your Git host or commit access on your repo. From your site dashboard on Netlify:
 
@@ -243,7 +246,7 @@ Netlify's Identity and Git Gateway services allow you to manage CMS admin users 
 3. If you'd like to allow one-click login with services like Google and GitHub, check the boxes next to the services you'd like to use, under **External providers**.
 4. Scroll down to **Services > Git Gateway**, and click **Enable Git Gateway**. This authenticates with your Git host and generates an API access token. In this case, we're leaving the Roles field blank, which means any logged-in user may access the CMS. For information on changing this, check the [Netlify Identity documentation](https://docs.netlify.com/visitor-access/identity/).
 
-## Accessing the CMS
+## 6) Accessing the CMS
 
 Your site CMS is now fully configured and ready for login!
 
@@ -255,7 +258,7 @@ After logging-in to the admin page, you should see a screen similar to 👇.
 
 ![netlify cms dashboard screenshot](/assets/uploads/screenshot-2020-05-30-at-8.35.18-pm.png)
 
-## Start publishing
+## 7) Start publishing
 
 It's time to create your first blog post. Click on `New Blog` button and start adding the title, image and other properties right from the handy interface. When you click Publish, a new commit will be created in your GitHub repo with this format `Create Blog “year-month-date-title”`.
 
